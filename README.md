@@ -83,7 +83,7 @@ If you use this code in your academic work, consider citing relevant papers and 
 
 ## 🧑‍💻 Author
 
-**Shreehank Jadhav**
+**Shreehan Kate**
 Feel free to reach out for collaboration or queries.
 
 ## 📄 License
