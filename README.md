@@ -12,7 +12,6 @@ This repository contains MATLAB implementations of bio-inspired optimization alg
 
   * **Particle Swarm Optimization (PSO)**
   * **Genetic Algorithm (GA)**
-  * **Ant Colony Optimization (ACO)**
 * Provides benchmark comparisons for tuned LQR performance.
 * Simulates system responses for step inputs.
 * Easy-to-understand and extendable MATLAB code.
@@ -22,7 +21,7 @@ This repository contains MATLAB implementations of bio-inspired optimization alg
 The goal is to find optimal $Q$ and $R$ matrices such that the closed-loop system:
 
 * Minimizes settling time and overshoot,
-* Minimizes the Integral of Time-weighted Absolute Error (ITAE),
+* Minimizes the Root Mean Square Error (RMSE),
 * Maximizes control smoothness.
 
 ## 🗂️ Repository Structure
@@ -32,11 +31,8 @@ Bio-Inspired-Optimization-based-methods-for-Linear-Quadratic-Regulator-tuning/
 │
 ├── PSO_LQR/                # LQR tuning using Particle Swarm Optimization
 ├── GA_LQR/                 # LQR tuning using Genetic Algorithm
-├── ACO_LQR/                # LQR tuning using Ant Colony Optimization
-├── utils/                  # Helper functions and plotting scripts
-├── results/                # Simulation results and plots
-└── README.md               # This file
-```
+├── SimulatedAnnealing_LQR/                # LQR tuning using Ant Colony Optimization
+
 
 ## 🚀 Getting Started
 
@@ -55,31 +51,13 @@ Bio-Inspired-Optimization-based-methods-for-Linear-Quadratic-Regulator-tuning/
    cd Bio-Inspired-Optimization-based-methods-for-Linear-Quadratic-Regulator-tuning
    ```
 
-2. Open MATLAB and set the working directory:
-
-   ```matlab
-   cd('path_to_repo')
-   ```
-
-3. Choose an algorithm folder (e.g., `PSO_LQR/`) and run the main script:
-
-   ```matlab
-   run('main_PSO_LQR.m')
-   ```
-
 ## 📊 Example Results
 
 * Step response comparisons between default and optimized LQR
 * Performance indices before and after optimization
 * Tuning convergence plots
+* Research Work published in "Subbareddy Chitta, Ramakalyan Ayyagari,  Shreehan Santosh Kate in "Bio-Inspired Optimization of LQR controllers for Feedback-Linearized Cruise Missiles" (accepted for presentation)
 
-## 📚 References
-
-If you use this code in your academic work, consider citing relevant papers and this repository. The optimization techniques are inspired by:
-
-* Kennedy, J. and Eberhart, R., “Particle Swarm Optimization,” 1995.
-* Holland, J.H., “Adaptation in Natural and Artificial Systems,” 1975.
-* Dorigo, M. and Stützle, T., “Ant Colony Optimization,” 2004.
 
 ## 🧑‍💻 Author
 
