@@ -99,23 +99,9 @@ Bio-Inspired-LQR-Optimization-for-Cruise-Missile/
 
 ---
 
-## 📚 References
-
-* Bryson, A.E., & Ho, Y.C. (1975). *Applied Optimal Control*
-* Kennedy, J., & Eberhart, R. (1995). *Particle Swarm Optimization*
-* Goldberg, D.E. (1989). *Genetic Algorithms in Search, Optimization and Machine Learning*
-* Kirkpatrick, S., Gelatt, C.D., & Vecchi, M.P. (1983). *Optimization by Simulated Annealing*
-
----
-
 ## 👨‍💻 Author
 
 **Shreehan Kate**
 For research inquiries or collaborations, feel free to reach out.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
