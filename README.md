@@ -1,21 +1,21 @@
 
-# 🧬 Bio-Inspired Optimization of LQR for Cruise Missile Control
+# Bio-Inspired Optimization of LQR for Cruise Missile Control
 
 This repository presents an intelligent control framework that applies **bio-inspired optimization algorithms**—including **Genetic Algorithm (GA)** and **Particle Swarm Optimization (PSO)**—to tune the **Linear Quadratic Regulator (LQR)** for cruise missile systems. The objective is to **optimize the Quadratic Performance Index (QPI)**, thereby improving tracking and control performance for feedback-linearized nonlinear missile dynamics.
 
 ---
 
-## 📌 Highlights
+## Highlights
 
-* ✅ Developed GA, PSO, and Simulated Annealing-based optimizers for LQR tuning
-* ✅ Optimized the **Q and R matrices** in the LQR cost function to minimize QPI
-* ✅ Improved tracking performance by **20%** compared to classical LQR
-* ✅ Implemented and validated on **feedback-linearized cruise missile models**
-* ✅ Modular, easy-to-extend MATLAB code for custom optimization experiments
+*  Developed GA, PSO, and Simulated Annealing-based optimizers for LQR tuning
+*  Optimized the **Q and R matrices** in the LQR cost function to minimize QPI
+*  Improved tracking performance by **20%** compared to classical LQR
+*  Implemented and validated on **feedback-linearized cruise missile models**
+*  Modular, easy-to-extend MATLAB code for custom optimization experiments
 
 ---
 
-## 🧠 Methodology
+##  Methodology
 
 1. **System Setup:**
 
@@ -44,7 +44,7 @@ This repository presents an intelligent control framework that applies **bio-ins
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Bio-Inspired-LQR-Optimization-for-Cruise-Missile/
@@ -59,7 +59,7 @@ Bio-Inspired-LQR-Optimization-for-Cruise-Missile/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Requirements
 
@@ -89,13 +89,13 @@ Bio-Inspired-LQR-Optimization-for-Cruise-Missile/
 
 ---
 
-## 📊 Results Summary
+##  Results Summary
 
 | Method              | Improvement in Tracking | QPI Reduction |
 | ------------------- | ----------------------- | ------------- |
-| Genetic Algorithm   | ✅ \~20%                 | Significant   |
-| Particle Swarm      | ✅ \~18–20%              | High          |
-| Simulated Annealing | ✅ Comparable            | Moderate      |
+| Genetic Algorithm   |  \~20%                 | Significant   |
+| Particle Swarm      |  \~18–20%              | High          |
+| Simulated Annealing |  Comparable            | Moderate      |
 
 ---
 
