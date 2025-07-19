@@ -1,107 +1,82 @@
+# **Optimization of LQR Controller Gains using Metaheuristic Algorithms**
 
-# Bio-Inspired Optimization of LQR for Cruise Missile Control
-
-This repository presents an intelligent control framework that applies **bio-inspired optimization algorithms**—including **Genetic Algorithm (GA)** and **Particle Swarm Optimization (PSO)**—to tune the **Linear Quadratic Regulator (LQR)** for cruise missile systems. The objective is to **optimize the Quadratic Performance Index (QPI)**, thereby improving tracking and control performance for feedback-linearized nonlinear missile dynamics.
-
----
-
-## Highlights
-
-*  Developed GA, PSO, and Simulated Annealing-based optimizers for LQR tuning
-*  Optimized the **Q and R matrices** in the LQR cost function to minimize QPI
-*  Improved tracking performance by **20%** compared to classical LQR
-*  Implemented and validated on **feedback-linearized cruise missile models**
-*  Modular, easy-to-extend MATLAB code for custom optimization experiments
+This repository presents the implementation of various metaheuristic optimization techniques to tune the **Linear Quadratic Regulator (LQR)** controller gains for systems with **time delays** and **aerodynamic disturbances**. The goal is to enhance control performance under practical constraints by automating the gain selection process.
 
 ---
 
-##  Methodology
+## **Project Overview**
 
-1. **System Setup:**
+Traditional LQR control design depends on manually selected weight matrices $Q$ and $R$, which can be suboptimal for real-world systems with nonlinearities, delays, and disturbances. In this project, the following global optimization algorithms are applied to optimize LQR performance:
 
-   * Missile dynamics are modeled and linearized using **feedback linearization** techniques.
+* Genetic Algorithm (GA)
+* Particle Swarm Optimization (PSO)
+* Simulated Annealing (SA)
+* Custom heuristic search techniques
 
-2. **Objective:**
-
-   * Minimize the **Quadratic Performance Index (QPI)**:
-
-     $$
-     J = \int_0^\infty (x^T Q x + u^T R u)\, dt
-     $$
-   * Find optimal **Q** and **R** matrices to improve performance metrics (e.g., settling time, overshoot, control effort).
-
-3. **Optimization Algorithms:**
-
-   * **Genetic Algorithm** (`Genetic_Algorithm.m`)
-   * **Particle Swarm Optimization** (`Particle_Swarm.m`)
-   * **Simulated Annealing** (`Simulated_annealing.m`)
-   * Master script: `Optimization_LQR.m` (coordinates the optimization and simulation workflow)
-
-4. **Validation:**
-
-   * Compared with fixed-gain LQR in simulation.
-   * Evaluated tracking performance under nominal and disturbed conditions.
+These methods are tested on a longitudinal flight dynamics model with **Dryden turbulence**, simulated using a custom Simulink model.
 
 ---
 
-##  Repository Structure
+## **Repository Structure**
 
-```
-Bio-Inspired-LQR-Optimization-for-Cruise-Missile/
-│
-├── Optimization_LQR.m            # Main script to run optimization and simulate results
-├── Genetic_Algorithm.m           # GA-based LQR tuning
-├── Particle_Swarm.m              # PSO-based LQR tuning
-├── Simulated_annealing.m         # SA-based LQR tuning
-├── Final_PAPER2_wtdelay_LQR.slxc # Cruise missile system simulation (compiled Simulink)
-├── README.md                     # Documentation
+```bash
+├── Codes/
+│   ├── Genetic_Algorithm.m           # GA implementation for LQR tuning
+│   ├── Particle_Swarm.m              # PSO-based LQR optimization
+│   ├── Simulated_annealing.m         # SA algorithm implementation
+│   ├── Optimization_LQR.m            # LQR setup, fitness eval, call optimizer
+│   └── drydenmodel.m                 # Turbulence model for aircraft simulation
+
+├── Simulink Files/
+│   └── Final_PAPER2_wtdelay_LQR.slx  # Full nonlinear aircraft model with LQR + delay
+
+├── README.md                         # Project description and instructions
 ```
 
 ---
 
-## Getting Started
+## **Setup & Execution**
 
-### Requirements
+### **Software Requirements**
 
-* MATLAB R2020a or later
+* MATLAB R2021a or later
 * Control System Toolbox
-* Global Optimization Toolbox
 * Simulink
 
-### Instructions
+### **Steps to Run**
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/shreehank22/Bio-Inspired-LQR-Optimization-for-Cruise-Missile.git
-   cd Bio-Inspired-LQR-Optimization-for-Cruise-Missile
-   ```
-
-2. **Open MATLAB and run the main script:**
-
-   ```matlab
-   run('Optimization_LQR.m')
-   ```
-
-3. **Choose the algorithm:** Inside the script, select which algorithm (GA, PSO, or SA) to use for tuning.
-
-4. **Analyze results:** Simulation plots and optimized gains are displayed automatically.
+1. Open `Optimization_LQR.m` to select the algorithm and launch optimization.
+2. Run `Genetic_Algorithm.m`, `Particle_Swarm.m`, or `Simulated_annealing.m` independently for individual tests.
+3. Simulate the optimized gains in `Final_PAPER2_wtdelay_LQR.slx`.
+4. Use `drydenmodel.m` to inject atmospheric turbulence into the model.
 
 ---
 
-##  Results Summary
+## **Objectives & Contributions**
 
-| Method              | Improvement in Tracking | QPI Reduction |
-| ------------------- | ----------------------- | ------------- |
-| Genetic Algorithm   |  \~20%                 | Significant   |
-| Particle Swarm      |  \~18–20%              | High          |
-| Simulated Annealing |  Comparable            | Moderate      |
+* Compare different optimization algorithms for LQR gain tuning.
+* Evaluate robustness under **actuator delay** and **Dryden wind gust model**.
+* Automate weight tuning using population-based search methods.
+* Validate control performance in a **realistic aircraft dynamics environment**.
 
 ---
 
-## 👨‍💻 Author
+## **Expected Outcomes**
 
-**Shreehan Kate**
-For research inquiries or collaborations, feel free to reach out.
+* Reduced settling time and overshoot
+* Improved disturbance rejection
+* Optimized control effort with better energy efficiency
 
+---
 
+## 📎 **Future Work**
+
+* Extend to MIMO systems and full 6-DOF UAV models.
+* Integrate Deep Reinforcement Learning for adaptive LQR tuning.
+* Implement GUI-based controller synthesis tool.
+
+---
+
+## **License**
+
+This repository is released under the [MIT License](LICENSE), allowing academic and research use.
