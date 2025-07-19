@@ -1,6 +1,6 @@
 # **Optimization of LQR Controller Gains using Metaheuristic Algorithms**
 
-This repository presents the implementation of various metaheuristic optimization techniques to tune the **Linear Quadratic Regulator (LQR)** controller gains for systems with **time delays** and **aerodynamic disturbances**. The goal is to enhance control performance under practical constraints by automating the gain selection process.
+This repository presents the implementation of various metaheuristic optimization techniques to tune the **Linear Quadratic Regulator (LQR)** controller gains for feedback-linearized cruise missiles. The goal is to enhance control performance under practical constraints by automating the gain selection process.
 
 ---
 
@@ -11,7 +11,6 @@ Traditional LQR control design depends on manually selected weight matrices $Q$ 
 * Genetic Algorithm (GA)
 * Particle Swarm Optimization (PSO)
 * Simulated Annealing (SA)
-* Custom heuristic search techniques
 
 These methods are tested on a longitudinal flight dynamics model with **Dryden turbulence**, simulated using a custom Simulink model.
 
@@ -55,9 +54,9 @@ These methods are tested on a longitudinal flight dynamics model with **Dryden t
 ## **Objectives & Contributions**
 
 * Compare different optimization algorithms for LQR gain tuning.
-* Evaluate robustness under **actuator delay** and **Dryden wind gust model**.
+* Evaluate robustness under **Dryden wind gust model**.
 * Automate weight tuning using population-based search methods.
-* Validate control performance in a **realistic aircraft dynamics environment**.
+* Validate control performance in a **realistic missile dynamics environment**.
 
 ---
 
@@ -73,7 +72,7 @@ These methods are tested on a longitudinal flight dynamics model with **Dryden t
 
 * Extend to MIMO systems and full 6-DOF UAV models.
 * Integrate Deep Reinforcement Learning for adaptive LQR tuning.
-* Implement GUI-based controller synthesis tool.
+* Implement a GUI-based controller synthesis tool.
 
 ---
 
