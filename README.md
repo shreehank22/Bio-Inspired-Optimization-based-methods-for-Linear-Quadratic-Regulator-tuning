@@ -60,6 +60,13 @@ These methods are tested on a longitudinal flight dynamics model with **Dryden t
 
 ---
 
+## Documentation
+
+For complete theoretical background, design equations, training pipeline, and result analysis, refer to:
+
+📄 [BioinspiredLQR_preprint.pdf](BioinspiredLQR_preprint.pdf)
+
+
 ## **Expected Outcomes**
 
 * Reduced settling time and overshoot
