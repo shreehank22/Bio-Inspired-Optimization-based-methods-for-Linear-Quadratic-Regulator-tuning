@@ -69,7 +69,7 @@ These methods are tested on a longitudinal flight dynamics model with **Dryden t
 
 ---
 
-## 📎 **Future Work**
+##  **Future Work**
 
 * Extend to MIMO systems and full 6-DOF UAV models.
 * Integrate Deep Reinforcement Learning for adaptive LQR tuning.
